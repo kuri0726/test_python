@@ -7,7 +7,7 @@ a = np.array([1,2,3,4,5,6,7])
 
 b = np.array([[1,2,3], [4,5,6], [7,8,9], [10,11,12]])
 
-
+#統計関数
 print(f'元の変数:{a}')
 
 a_sum = np.sum(a)
@@ -21,3 +21,11 @@ print(f'最大値:{a_max}')
 
 a_min = a.min()
 print(f'最小値:{a}')
+
+#変数間の演算
+yt = np.array([1,1,0,1,0,1,1,0,1,1])
+yp = np.array([1,1,0,1,0,1,1,1,1,1])
+
+w = (yt == yp)
+print(w)
+print(w.sum())

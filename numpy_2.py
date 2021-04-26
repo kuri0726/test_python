@@ -29,3 +29,12 @@ yp = np.array([1,1,0,1,0,1,1,1,1,1])
 w = (yt == yp)
 print(w)
 print(w.sum())
+
+#ブロードキャスト機能
+print(a)
+c = (a - np.min(a)) / (np.max(a) - np.min(a))
+print(c)
+
+#数値配列の生成
+x = np.linspace(-5, 5, 11)
+print(x)

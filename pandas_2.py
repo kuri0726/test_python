@@ -1,5 +1,4 @@
-
-# CSVファイルからの読み込み
+#CSVファイルからの読み込み
 
 import numpy as np
 import pandas as pd
@@ -19,6 +18,13 @@ csv_url = 'https://github.com/makaishi2/sample-data\
 
 # データ読み込み
 df_csv = pd.read_csv(csv_url)
+
+# 結果確認
+display(df_csv)
+
+# ファイル読み込み後の列名変更
+columns = ['A列', 'B列', 'C列']
+df_csv.columns = columns
 
 # 結果確認
 display(df_csv)

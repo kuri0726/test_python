@@ -1,16 +1,8 @@
-#CSVファイルからの読み込み
-
-import numpy as np
-import pandas as pd
-
-#データフレーム表示用関数
-from IPython.display import display
-#データフレームでの表示制度　小数点4桁まで表示
-pd.options.display.float_format = '{:.4f}'.format
-#データフレームですべての項目を表示
-pd.set_option("display.max_columns",None)
+#pandas パンダス
 
 
+
+# CSVファイルからの読み込み
 
 # 読み込み元URL
 csv_url = 'https://github.com/makaishi2/sample-data\
@@ -28,3 +20,18 @@ df_csv.columns = columns
 
 # 結果確認
 display(df_csv)
+
+
+
+# Excelファイルからの読み込み
+
+# 読み込み元URL
+excel_url = 'https://github.com/makaishi2/sample-data\
+/raw/d2b5d7e7c3444d995a1fed5bdadf703709946c75/data/df-sample.xlsx'
+
+# データ読み込み
+df_excel = pd.read_excel(excel_url)
+
+# 結果確認
+display(df_excel)
+

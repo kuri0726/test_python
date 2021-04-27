@@ -22,3 +22,10 @@ df_csv = pd.read_csv(csv_url)
 
 # 結果確認
 display(df_csv)
+
+# ファイル読み込み後の列名変更
+columns = ['A列', 'B列', 'C列']
+df_csv.columns = columns
+
+# 結果確認
+display(df_csv)

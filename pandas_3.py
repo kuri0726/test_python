@@ -75,3 +75,47 @@ display(df3)
 # まとめて1行で表現
 df4 = df[df['col_a'] % 2 == 1]
 display(df4)
+
+# 列削除
+df5 = df.drop('col_a', axis=1)
+display(df5)
+
+# 欠損値のある行を削除
+df6 = df.dropna(subset = ['col_b'])
+display(df6)
+
+# 列連結
+df7 = pd.concat([df, ser], axis=1)
+display(df7)
+
+#  特定列に対する統計関数
+a_mean = df['col_a'].mean()
+a_max = df['col_a'].max()
+a_min = df['col_a'].min()
+
+print(f'平均: {a_mean}  最大:{a_max}  最小:{a_min}')
+
+# データフレーム全体にmean関数呼び出し
+print(df.mean())
+
+# 項目ごとの統計情報取得
+display(df.describe())
+
+# 項目値の個数集計
+df7['col_d'].value_counts()
+
+# NULL値チェック
+display(df.isnull())
+
+# 列単位の欠損値集計
+print(df.isnull().sum())
+
+# groupby関数でcol_dの項目値ごとの集計
+df8 = df7.groupby('col_d').mean()
+display(df8)
+
+# map関数でmale/femaleを1/0に置き換え
+df9 = df7.copy()
+mf_map = {'male': 1, 'female': 0}
+df9['col_d'] = df9['col_d'].map(mf_map)
+display(df9)

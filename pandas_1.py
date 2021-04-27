@@ -17,5 +17,14 @@ df = pd.DataFrame(b, columns=['col_a','col_b','col_c'])
 
 #型表示
 print(type(df))
+
 #display関数による整形表示
 display(df)
+
+#列名
+print('列名', df.columns)
+
+print('行名', df.index)
+
+#データ全体表示
+print('データ本体\n', df.values)

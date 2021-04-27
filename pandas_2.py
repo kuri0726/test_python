@@ -1,5 +1,14 @@
 #pandas パンダス
 
+import numpy as np
+import pandas as pd
+
+#データフレーム表示用関数
+from IPython.display import display
+#データフレームでの表示制度　小数点4桁まで表示
+pd.options.display.float_format = '{:.4f}'.format
+#データフレームですべての項目を表示
+pd.set_option("display.max_columns",None)
 
 
 # CSVファイルからの読み込み

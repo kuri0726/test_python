@@ -9,6 +9,7 @@ warnings.filterwarnings('ignore')
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+matplotlib.use('TkAgg')
 
 # matplotlib日本語化対応
 import japanize_matplotlib

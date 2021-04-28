@@ -41,3 +41,22 @@ plt.scatter(xs, ys)
 
 # 描画
 plt.show()
+
+# データ準備
+
+# シグモイド関数の定義
+def sigmoid(x, a):
+    return 1/(1 + np.exp(-a*x))
+
+# グラフ描画用x座標リスト
+xp = np.linspace(-3, 3, 61)
+
+
+# サイズ設定
+plt.rcParams['figure.figsize'] = (6, 6)
+
+# グラフ描画
+plt.plot(xp, sigmoid(xp, 1.0))
+
+# 描画
+plt.show()

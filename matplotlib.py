@@ -51,7 +51,6 @@ def sigmoid(x, a):
 # グラフ描画用x座標リスト
 xp = np.linspace(-3, 3, 61)
 
-
 # サイズ設定
 plt.rcParams['figure.figsize'] = (6, 6)
 

@@ -1,0 +1,43 @@
+MySQLの操作
+
+●ログイン～ログアウト
+net start mysql57
+・・・MySQLを起動
+
+mysql --user=root -–password
+・・・rootユーザーとしてログイン
+
+exit;
+・・・MySQLからログアウト
+
+net stop mysql57
+・・・MySQLの停止
+
+●データベースの作成
+SHOW databases;
+・・・データベースの一覧を見る
+
+CREATE DATABASE「プロジェクト名」;
+・・・プロジェクトを新しく始める
+
+USE「プロジェクト名」;
+・・・データベースの選択
+
+SHOW tables;
+・・・テーブルの一覧を見る
+
+CREATE TABLE users (id INT AUTO_INCREMENT, 「カラム名」 TEXT, PRIMARY KEY (id)) DEFAULT CHARSET=utf8;
+・・・テーブル作成
+
+DESCRIBE 「テーブル名」;
+・・・テーブル構造を表示
+
+
+●データベースの削除
+DROP TABLE 「テーブル名」;
+・・・テーブルの削除
+
+DROP DATABASE「プロジェクト名」;
+・・・プロジェクトの削除
+
+※インストールした時に作られた４つのデータベース（mysql, sys, information_schema, performance_schema）は消さないように気をつけましょう
